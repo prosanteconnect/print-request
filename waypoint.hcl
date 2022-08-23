@@ -29,7 +29,7 @@ app "print-request" {
     registry {
       use "docker" {
         image = "${var.registry_path}/print-request"
-        tag   = gitrefpretty()
+        tag   = "1.0"
         username = var.registry_username
         password = var.registry_password
       }
