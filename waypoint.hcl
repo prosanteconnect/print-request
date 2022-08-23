@@ -1,4 +1,4 @@
-project = "mock/print-request"
+project = "print-request"
 
 # Labels can be specified for organizational purposes.
 labels = { "domaine" = "psc" }
