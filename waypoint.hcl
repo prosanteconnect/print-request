@@ -28,7 +28,7 @@ app "print-request" {
     # Uncomment below to use a remote docker registry to push your built images.
     registry {
       use "docker" {
-        image = "${var.registry_path}/pscextract"
+        image = "${var.registry_path}/print-request"
         tag   = gitrefpretty()
         encoded_auth = filebase64("/secrets/dockerAuth.json")
       }
