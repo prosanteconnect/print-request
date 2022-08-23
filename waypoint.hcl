@@ -30,7 +30,8 @@ app "print-request" {
       use "docker" {
         image = "${var.registry_path}/print-request"
         tag   = gitrefpretty()
-        encoded_auth = filebase64("/secrets/dockerAuth.json")
+        username = var.registry_username
+        password = var.registry_password
       }
     }
   }
@@ -54,12 +55,17 @@ variable "datacenter" {
 variable "registry_username" {
   type    = string
   default = ""
+  env     = ["REGISTRY_USERNAME"]
+  sensitive = true
 }
 
 variable "registry_password" {
   type    = string
   default = ""
+  env     = ["REGISTRY_PASSWORD"]
+  sensitive = true
 }
+
 
 variable "dockerfile_path" {
   type = string
