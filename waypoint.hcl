@@ -55,14 +55,12 @@ variable "datacenter" {
 variable "registry_username" {
   type    = string
   default = ""
-  env     = ["REGISTRY_USERNAME"]
   sensitive = true
 }
 
 variable "registry_password" {
   type    = string
   default = ""
-  env     = ["REGISTRY_PASSWORD"]
   sensitive = true
 }
 
@@ -74,7 +72,7 @@ variable "dockerfile_path" {
 
 variable "proxy_address" {
   type = string
-  default = "proxy_address"
+  default = ""
 }
 
 variable "registry_path" {
