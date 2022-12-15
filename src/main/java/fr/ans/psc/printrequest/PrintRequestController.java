@@ -13,4 +13,9 @@ public class PrintRequestController {
     public ResponseEntity<String> printRequest(@RequestBody String body) {
         return new ResponseEntity<>(body, HttpStatus.OK);
     }
+    
+    @GetMapping("/check")
+    public String check() {
+        return "print-request is alive";
+    }
 }
