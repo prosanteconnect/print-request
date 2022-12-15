@@ -51,13 +51,11 @@ variable "datacenter" {
 variable "registry_username" {
   type    = string
   default = ""
-  sensitive = true
 }
 
 variable "registry_password" {
   type    = string
   default = ""
-  sensitive = true
 }
 
 
